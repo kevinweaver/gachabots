@@ -18,19 +18,21 @@ import { WriteContract } from "../components/WriteContract";
 import { WriteContractPrepared } from "../components/WriteContractPrepared";
 
 import "../styles/globals.css";
+import { IncrementCounter } from "../components/IncrementCounter";
+import { GetCounter } from "../components/GetCounter";
 
 export default function Page() {
   return (
     <>
-      <h1>Hackathon Template</h1>
+      <h1>Gachabots</h1>
 
       <ConnectButton />
 
       <Connected>
         <hr />
-        <h2>Network</h2>
-        <NetworkSwitcher />
-        <br />
+        <IncrementCounter />
+        <GetCounter />
+        {/* <br />
         <hr />
         <h2>Account</h2>
         <Account />
@@ -89,7 +91,7 @@ export default function Page() {
         <br />
         <hr />
         <h2>Write Contract (Prepared)</h2>
-        <WriteContractPrepared />
+        <WriteContractPrepared /> */}
       </Connected>
     </>
   );
