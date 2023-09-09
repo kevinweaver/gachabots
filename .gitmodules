@@ -40,3 +40,6 @@
 [submodule "contracts/lib/seaport-core"]
 	path = contracts/lib/seaport-core
 	url = https://github.com/ProjectOpenSea/seaport-core
+[submodule "contracts/lib/murky.git"]
+	path = contracts/lib/murky.git
+	url = https://github.com/dmfxyz/murky.git
