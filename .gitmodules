@@ -31,3 +31,6 @@
 [submodule "contracts/lib/solarray"]
 	path = contracts/lib/solarray
 	url = https://github.com/evmcheb/solarray
+[submodule "contracts/lib/seaport-types"]
+	path = contracts/lib/seaport-types
+	url = https://github.com/ProjectOpenSea/seaport-types
