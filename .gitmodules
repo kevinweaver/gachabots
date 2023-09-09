@@ -22,3 +22,6 @@
 [submodule "lib/murky"]
   path = lib/murky
   url = https://github.com/dmfxyz/murky.git
+[submodule "contracts/lib/solmate"]
+	path = contracts/lib/solmate
+	url = https://github.com/transmissions11/solmate
