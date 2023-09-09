@@ -32,11 +32,11 @@ export default function Page() {
         <hr />
         <IncrementCounter />
         <GetCounter />
-        {/* <br />
+        <br />
         <hr />
         <h2>Account</h2>
         <Account />
-        <br />
+        {/* <br />
         <hr />
         <h2>Balance</h2>
         <Balance />

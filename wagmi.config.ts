@@ -10,7 +10,7 @@ export default defineConfig({
         Counter: {
           [chains.mainnet.id]: "0x1A61839Eb5fC6eBBcAe01eD5E79062E598792Dac",
           [chains.goerli.id]: "0x78991BB1D194C1235fe285240af8489CFA552151",
-          [chains.foundry.id]: "0xDbC1fC13cE9605Cc7A3C442b22c95c04A61c9B58",
+          [chains.foundry.id]: "0x9b75fa0c8baa2A05F0bA700D8D742CdABD5e2781",
         },
       },
       project: "./contracts",
