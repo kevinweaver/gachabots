@@ -32,8 +32,8 @@ export default function Page() {
 
       <Connected>
         <hr />
-        <CapsuleMint />
-        <CapsuleBalance />
+        {/* <CapsuleMint /> */}
+
         <Gachapon />
         {/* <IncrementCounter />
         <GetCounter /> */}

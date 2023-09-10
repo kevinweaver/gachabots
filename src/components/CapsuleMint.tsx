@@ -1,11 +1,10 @@
 "use client";
 
 import { Address, BaseError, keccak256, toBytes } from "viem";
-import { useAccount, useContractWrite, useWaitForTransaction } from "wagmi";
-
-import { wagmiContractConfig } from "./contracts";
+import { useAccount, useWaitForTransaction } from "wagmi";
 import { stringify } from "../utils/stringify";
 import { useRedeemableCapsuleMint } from "../generated";
+import { Mint } from "./Mint";
 
 export function CapsuleMint() {
   const { address } = useAccount();
@@ -27,9 +26,21 @@ export function CapsuleMint() {
           });
         }}
       >
-        <button disabled={isLoading} type="submit">
+        <Mint
+          className={isLoading ? "disabled" : ""}
+          onClick={(e) => {
+            if (!isLoading) {
+              const form = e.currentTarget.closest("form");
+              if (form) {
+                form.submit();
+              }
+            }
+          }}
+        />
+
+        {/* <button disabled={isLoading} type="submit">
           Mint
-        </button>
+        </button> */}
       </form>
 
       {isLoading && <div>Check wallet...</div>}
