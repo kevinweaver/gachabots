@@ -4,7 +4,8 @@ import { Providers } from "./providers";
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "wagmi",
+  title: "Gatchabots",
+  description: "Redeemable toy vending machine.",
 };
 
 export default function RootLayout({
