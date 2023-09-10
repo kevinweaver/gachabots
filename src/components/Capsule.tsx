@@ -34,22 +34,26 @@ export function Capsule({
       </div>
 
       {/* Bot Fullscreen Image */}
-
       {showBot && (
-        <div className="fixed z-50 top-0 left-0 w-full h-full flex items-center justify-center fade-in">
-          <img
-            src="/images/BG2.gif"
-            alt="Background"
-            className="absolute object-cover w-full h-full z-0"
-            onClick={() => setShowBot(false)}
-          />
-
-          <img
-            src="/images/bot.png"
-            alt="Full Screen Bot"
-            className="w-1/2 h-1/2 object-contain z-10 fall"
-          />
-        </div>
+        <>
+          <div className="fixed z-50 top-0 left-0 w-full h-full flex items-center justify-center fade-in">
+            <img
+              src="/images/BG2.gif"
+              alt="Background"
+              className="absolute object-cover w-full h-full z-0"
+              onClick={() => setShowBot(false)}
+            />
+          </div>
+          <div className="fixed z-50 top-0 left-0 w-full h-full flex items-center justify-center">
+            <img
+              src="/images/bot.png"
+              alt="Full Screen Bot"
+              className={`w-1/2 h-1/2 object-contain z-10 fall ${
+                showBot ? "bot-show" : "bot-hidden"
+              }`}
+            />
+          </div>
+        </>
       )}
 
       {/* Modal rendering */}
