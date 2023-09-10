@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "gb-blue": "#093e96",
+      },
+      fontFamily: {
+        varela: ['"Varela Round"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
