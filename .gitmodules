@@ -43,3 +43,6 @@
 [submodule "contracts/lib/murky.git"]
 	path = contracts/lib/murky.git
 	url = https://github.com/dmfxyz/murky.git
+[submodule "contracts/lib/solady"]
+	path = contracts/lib/solady
+	url = https://github.com/Vectorized/solady
