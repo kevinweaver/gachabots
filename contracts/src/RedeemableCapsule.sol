@@ -35,4 +35,5 @@ contract RedeemableCapsule is ERC1155, Ownable {
     function tokensOwnedBy(address account) public view returns (uint256) {
         return _tokensOwned[account];
     }
+
 }
