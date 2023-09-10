@@ -14,3 +14,6 @@
 [submodule "contracts/lib/seaport-sol"]
 	path = contracts/lib/seaport-sol
 	url = https://github.com/ProjectOpenSea/seaport-sol
+[submodule "contracts/lib/seaport-core"]
+	path = contracts/lib/seaport-core
+	url = https://github.com/ProjectOpenSea/seaport-core
