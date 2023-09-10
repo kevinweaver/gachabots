@@ -1,0 +1,46 @@
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fall {
+  animation: fall 1s forwards;
+  animation-delay: 2s; /* This ensures the falling animation starts after the background fades in */
+}
+
+.bot-hidden {
+  opacity: 0;
+}
+
+.bot-show {
+  animation: showBot 5s forwards;
+}
+
+@keyframes showBot {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

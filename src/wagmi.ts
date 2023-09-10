@@ -14,7 +14,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = "d96a7e491e6a7f99ad93e400a5462afa";
 
 const { connectors } = getDefaultWallets({
-  appName: "My wagmi + RainbowKit App",
+  appName: "Gachabots",
   chains,
   projectId: projectId,
 });

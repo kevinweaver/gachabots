@@ -3,6 +3,15 @@ src = 'contracts/src'
 test = 'contracts/test'
 out = 'contracts/out'
 libs = ['contracts/lib']
-solc = '0.8.13'
+solc = '0.8.19'
+remappings = [
+  'forge-std/=contracts/lib/forge-std/src/',
+  'ds-test/=contracts/lib/forge-std/lib/ds-test/src/',
+  'solady/=contracts/lib/solady/',
+]
+
+  # 'seaport-core/=contracts/lib/seaport-core/',
+  # 'seaport-sol/=contracts/lib/seaport-sol/',
+  # 'seaport-types/=contracts/lib/seaport-types/'
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
