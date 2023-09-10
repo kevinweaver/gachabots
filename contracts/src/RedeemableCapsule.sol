@@ -22,7 +22,7 @@ contract RedeemableCapsule is ERC1155, Ownable {
         return _tokenURI;
     }
 
-    function mint(address account, uint256 amount, bytes memory data) public onlyOwner {
+    function mint(address account, uint256 amount, bytes memory data) public  {
         require(_tokensOwned[account] + amount <= TOKEN_LIMIT, "Exceeds token limit for address");
 
         // Update the tokens owned by the account
@@ -32,7 +32,6 @@ contract RedeemableCapsule is ERC1155, Ownable {
         _mint(account, TOKEN_ID, amount, data);
     }
 
-    // If needed, you can also add a function to check tokens owned by an address.
     function tokensOwnedBy(address account) public view returns (uint256) {
         return _tokensOwned[account];
     }

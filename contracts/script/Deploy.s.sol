@@ -10,7 +10,7 @@ import "forge-std/Script.sol";
 // import {ERC721RedemptionMintable} from "../src/lib/ERC721RedemptionMintable.sol";
 import { RedeemableCapsule } from "../src/RedeemableCapsule.sol";
 
-contract DeployAndConfigureCampaign is Script {
+contract Deploy is Script {
     // Addresses: Seaport
     // address seaport = 0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC;
     // address conduit = 0x1E0049783F008A0085193E00003D00cd54003c71;

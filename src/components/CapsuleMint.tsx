@@ -1,16 +1,15 @@
 "use client";
 
-import { BaseError } from "viem";
-import { useContractWrite, useWaitForTransaction } from "wagmi";
+import { Address, BaseError, keccak256, toBytes } from "viem";
+import { useAccount, useContractWrite, useWaitForTransaction } from "wagmi";
 
 import { wagmiContractConfig } from "./contracts";
 import { stringify } from "../utils/stringify";
+import { useRedeemableCapsuleMint } from "../generated";
 
-export function WriteContract() {
-  const { write, data, error, isLoading, isError } = useContractWrite({
-    ...wagmiContractConfig,
-    functionName: "mint",
-  });
+export function CapsuleMint() {
+  const { address } = useAccount();
+  const { write, data, error, isLoading, isError } = useRedeemableCapsuleMint();
   const {
     data: receipt,
     isLoading: isPending,
@@ -19,18 +18,15 @@ export function WriteContract() {
 
   return (
     <>
-      <h3>Mint</h3>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           const formData = new FormData(e.target as HTMLFormElement);
-          const tokenId = formData.get("tokenId") as string;
           write({
-            args: [BigInt(tokenId)],
+            args: [address as Address, BigInt(1), keccak256(toBytes(""))],
           });
         }}
       >
-        <input name="tokenId" placeholder="token id" />
         <button disabled={isLoading} type="submit">
           Mint
         </button>

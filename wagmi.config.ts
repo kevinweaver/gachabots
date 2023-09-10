@@ -13,7 +13,7 @@ export default defineConfig({
           [chains.foundry.id]: "0x9b75fa0c8baa2A05F0bA700D8D742CdABD5e2781",
         },
         RedeemableCapsule: {
-          [chains.foundry.id]: "0x9b75fa0c8baa2A05F0bA700D8D742CdABD5e2781",
+          [chains.foundry.id]: "0xbafaba6306ead89ce8329e71c26524b6d5ca2edc",
         },
       },
       project: "./contracts",

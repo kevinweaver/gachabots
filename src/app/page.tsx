@@ -19,7 +19,8 @@ import { WriteContractPrepared } from "../components/WriteContractPrepared";
 
 import "../styles/globals.css";
 import { IncrementCounter } from "../components/IncrementCounter";
-import { GetCounter } from "../components/GetCounter";
+import { CapsuleBalance } from "../components/CapsuleBalance";
+import { CapsuleMint } from "../components/CapsuleMint";
 
 export default function Page() {
   return (
@@ -30,12 +31,14 @@ export default function Page() {
 
       <Connected>
         <hr />
-        <IncrementCounter />
-        <GetCounter />
-        <br />
+        <CapsuleMint />
+        <CapsuleBalance />
+        {/* <IncrementCounter />
+        <GetCounter /> */}
+        {/* <br />
         <hr />
         <h2>Account</h2>
-        <Account />
+        <Account /> */}
         {/* <br />
         <hr />
         <h2>Balance</h2>
