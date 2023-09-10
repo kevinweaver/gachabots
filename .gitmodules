@@ -5,3 +5,6 @@
 [submodule "contracts/lib/solady"]
 	path = contracts/lib/solady
 	url = https://github.com/Vectorized/solady
+[submodule "contracts/lib/solarray"]
+	path = contracts/lib/solarray
+	url = https://github.com/evmcheb/solarray
