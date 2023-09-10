@@ -17,10 +17,11 @@ import { WatchPendingTransactions } from "../components/WatchPendingTransactions
 import { WriteContract } from "../components/WriteContract";
 import { WriteContractPrepared } from "../components/WriteContractPrepared";
 
-import "../styles/globals.css";
+//import "../styles/globals.css";
 import { IncrementCounter } from "../components/IncrementCounter";
 import { CapsuleBalance } from "../components/CapsuleBalance";
 import { CapsuleMint } from "../components/CapsuleMint";
+import Gachapon from "../components/Gachapon";
 
 export default function Page() {
   return (
@@ -33,6 +34,7 @@ export default function Page() {
         <hr />
         <CapsuleMint />
         <CapsuleBalance />
+        <Gachapon />
         {/* <IncrementCounter />
         <GetCounter /> */}
         {/* <br />

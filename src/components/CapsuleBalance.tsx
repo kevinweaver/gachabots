@@ -12,32 +12,32 @@ export function CapsuleBalance() {
     <div>
       <div>
         <TokensOwnedBy />
-        <br />
-        <TotalSupply />
+        {/* <br />
+        <TotalSupply /> */}
       </div>
     </div>
   );
 }
 
-function TotalSupply() {
-  const { data, isRefetching, refetch } = useContractRead({
-    ...wagmiContractConfig,
-    functionName: "totalSupply",
-  });
+// function TotalSupply() {
+//   const { data, isRefetching, refetch } = useContractRead({
+//     ...wagmiContractConfig,
+//     functionName: "totalSupply",
+//   });
 
-  return (
-    <div>
-      Total Supply: {data?.toString()}
-      <button
-        disabled={isRefetching}
-        onClick={() => refetch()}
-        style={{ marginLeft: 4 }}
-      >
-        {isRefetching ? "loading..." : "refetch"}
-      </button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       Total Supply: {data?.toString()}
+//       <button
+//         disabled={isRefetching}
+//         onClick={() => refetch()}
+//         style={{ marginLeft: 4 }}
+//       >
+//         {isRefetching ? "loading..." : "refetch"}
+//       </button>
+//     </div>
+//   );
+// }
 
 function TokensOwnedBy() {
   const { address } = useAccount();
