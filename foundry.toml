@@ -5,11 +5,12 @@ out = 'contracts/out'
 libs = ['contracts/lib']
 solc = '0.8.19'
 remappings = [
-  'ds-test/=lib/forge-std/lib/ds-test/src/',
-  'solady/=lib/solady/',
-  'seaport-core/=lib/seaport-core/',
-  'seaport-sol/=lib/seaport-sol/',
-  'seaport-types/=lib/seaport-types/'
+  'forge-std/=contracts/lib/forge-std/src/',
+  'ds-test/=contracts/lib/forge-std/lib/ds-test/src/',
+  'solady/=contracts/lib/solady/',
+  'seaport-core/=contracts/lib/seaport-core/',
+  'seaport-sol/=contracts/lib/seaport-sol/',
+  'seaport-types/=contracts/lib/seaport-types/'
 ]
 
 
