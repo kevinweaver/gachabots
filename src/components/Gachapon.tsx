@@ -14,7 +14,7 @@ export default function Gachapon() {
   const balance = 5;
   return (
     <>
-      <div className="bg-gradient-to-b from-gray-200 to-gray-400 ">
+      <div className="bg-gradient-to-b from-gray-200 to-gray-400 h-200">
         <div className="absolute top-4 right-4">
           <ConnectButton />
         </div>

@@ -66,7 +66,7 @@ export function Capsule({
             >
               Redeem
             </button>
-            <button className="mt-4" onClick={closeModal}>
+            <button className="mt-4 mx-4" onClick={closeModal}>
               Cancel
             </button>
           </div>

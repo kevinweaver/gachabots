@@ -3,7 +3,9 @@ import Gachapon from "../components/Gachapon";
 export default function Page() {
   return (
     <>
-      <Gachapon />
+      <div className="bg-gray-400 h-screen w-full">
+        <Gachapon />
+      </div>
     </>
   );
 }

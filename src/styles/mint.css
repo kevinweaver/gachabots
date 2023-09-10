@@ -1,0 +1,21 @@
+.spin-clockwise {
+  animation: spinClockwise 2s linear forwards;
+}
+
+.spin-anti-clockwise {
+  animation: spinAntiClockwise 1s linear forwards;
+}
+@keyframes spinClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(90deg); /* Adjusted for 50% rotation */
+  }
+  80% {
+    transform: rotate(90deg); /* Adjusted for 50% rotation */
+  }
+  100% {
+    transform: rotate(0deg); /* Adjusted for 50% rotation */
+  }
+}

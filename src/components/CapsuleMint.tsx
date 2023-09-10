@@ -5,7 +5,9 @@ import { useAccount, useWaitForTransaction } from "wagmi";
 import { stringify } from "../utils/stringify";
 import { useRedeemableCapsuleMint } from "../generated";
 import { Mint } from "./Mint";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import "../styles/mint.css";
 
 export const CapsuleMint = ({
   className = "",
@@ -15,6 +17,9 @@ export const CapsuleMint = ({
   setShowCapsule?: Function;
 }) => {
   const { address } = useAccount();
+
+  const [animationClass, setAnimationClass] = useState("");
+
   const { write, data, error, isLoading, isError } = useRedeemableCapsuleMint();
   const {
     data: receipt,
@@ -24,10 +29,13 @@ export const CapsuleMint = ({
   useEffect(() => {
     if (isPending || isSuccess || isError) {
       setShowCapsule(true);
-      console.log("Showing capsule");
     }
   }, [isPending, isSuccess, isError]);
 
+  const handleMintClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    //e.preventDefault();
+    e.currentTarget.classList.add("spin-clockwise"); // Add clockwise spinning animation
+  };
   return (
     <>
       <form
@@ -39,36 +47,14 @@ export const CapsuleMint = ({
           });
         }}
       >
-        <button disabled={isLoading} type="submit">
+        <button disabled={isLoading} type="submit" onClick={handleMintClick}>
           <Mint
-            className={`${isLoading ? "disabled" : ""} cursor-pointer`}
-            // onClick={(e) => {
-            //   e.preventDefault();
-            //   e.stopPropagation();
-            //   if (!isLoading) {
-            //     const form = e.currentTarget.closest("form");
-            //     if (form) {
-            //       form.dispatchEvent(new Event("submit", { cancelable: true }));
-            //     }
-            //   }
-            // }
-            // }
+            className={`${
+              isLoading ? "disabled" : ""
+            } cursor-pointer ${animationClass} `}
           />
         </button>
       </form>
-
-      {/* {(isPending || isSuccess) && setShowCapsule(true)} */}
-      {/* {isLoading && <div>Check wallet...</div>}
-      {isPending && <div>Transaction pending...</div>}
-      {isSuccess && (
-        <>
-          <div>Transaction Hash: {data?.hash}</div>
-          <div>
-            Transaction Receipt: <pre>{stringify(receipt, null, 2)}</pre>
-          </div>
-        </>
-      )}
-      {isError && <div>{(error as BaseError)?.shortMessage}</div>} */}
     </>
   );
 };
