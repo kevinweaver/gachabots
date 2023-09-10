@@ -46,3 +46,6 @@
 [submodule "contracts/lib/solady"]
 	path = contracts/lib/solady
 	url = https://github.com/Vectorized/solady
+[submodule "contracts/lib/murky"]
+	path = contracts/lib/murky
+	url = https://github.com/dmfxyz/murky
