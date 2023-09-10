@@ -138,8 +138,8 @@ Backend dependencies are fetched with:
 
 `forge install package/name`
 
-While setting up this repo, the following dependencies were used:
+This repo uses the following dependencies:
 
 ```
-forge install foundry-rs/forge-std Vectorized/solady.git evmcheb/solarray ProjectOpenSea/seaport-types ProjectOpenSea/seaport-sol ProjectOpenSea/seaport-core dmfxyz/murky.git
+forge install foundry-rs/forge-std Vectorized/solady evmcheb/solarray ProjectOpenSea/seaport-types ProjectOpenSea/seaport-sol ProjectOpenSea/seaport-core dmfxyz/murky
 ```
