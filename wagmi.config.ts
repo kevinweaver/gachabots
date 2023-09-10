@@ -12,6 +12,9 @@ export default defineConfig({
           [chains.goerli.id]: "0x78991BB1D194C1235fe285240af8489CFA552151",
           [chains.foundry.id]: "0x9b75fa0c8baa2A05F0bA700D8D742CdABD5e2781",
         },
+        RedeemableCapsule: {
+          [chains.foundry.id]: "0x9b75fa0c8baa2A05F0bA700D8D742CdABD5e2781",
+        },
       },
       project: "./contracts",
     }),

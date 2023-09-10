@@ -27,7 +27,7 @@ contract DeployAndConfigureCampaign is Script {
         //     conduitKey,
         //     seaport
         // );
-        RedeemableCapsule redeemableToken = new RedeemableCapsule();
+        RedeemableCapsule capsule = new RedeemableCapsule();
         // ERC721RedemptionMintable redemptionToken = new ERC721RedemptionMintable(
         //     address(offerer),
         //     address(redeemableToken)
@@ -64,13 +64,13 @@ contract DeployAndConfigureCampaign is Script {
         // });
         // offerer.createCampaign(params, "ipfs://QmdChMVnMSq4U6oVKhud7wUSEZGnwuMuTY5rUQx57Ayp6H");
 
-				// Mint token 1 (the only one), amount 1, pass no data
-        redeemableToken.mint(msg.sender, 1, "");
+				// Mint to sender, amount 1, pass no data
+        capsule.mint(msg.sender, 1, "");
 
         // Let's redeem them!
         // uint256 campaignId = 1;
         // bytes32 redemptionHash = bytes32(0);
         // bytes memory data = abi.encode(campaignId, redemptionHash);
-        redeemableToken.safeTransferFrom(msg.sender, address(_BURN_ADDRESS), _CAPSULE_ID, 1, "");
+        capsule.safeTransferFrom(msg.sender, address(_BURN_ADDRESS), _CAPSULE_ID, 1, "");
     }
 }
